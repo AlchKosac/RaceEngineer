@@ -2,22 +2,29 @@
   <img src="assets/banner-readme-1200x300.png" alt="RaceEngineer" width="900">
 </p>
 
-**RaceEngineer** je desktopová aplikace (Windows a Linux / Steam Deck) pro záznam a analýzu telemetrie ze hry **F1 25** (UDP, formát 2026 Season Pack).
+**English** · [Čeština](README.cs.md)
 
-- záznam UDP telemetrie do SQLite
-- seznam okruhů s mapou, zatáčkami, rekordem kola a vašimi sessiony
-- analýza kol: grafy, mapa trati, porovnání kol, sektory, pozice, nastavení vozu, pneumatiky
-- plánovač závodní strategie (okno boxové zastávky, safety car, penalizace)
-- MCP server, přes který může AI telemetrii číst i aplikaci ovládat
+**RaceEngineer** is a desktop application (Windows and Linux / Steam Deck) that records and analyses telemetry from **F1 25** (UDP, 2026 Season Pack format).
 
-## Stažení
+- records UDP telemetry into SQLite
+- home page with the circuits of the game: map, named turns, lap record and your own sessions
+- lap analysis: channel charts, track map, lap comparison, sectors, positions, car setup, tyres
+- race strategy planner (pit window, safety car, penalties)
+- MCP server that lets an AI read the telemetry and control the application
+- English (default) and Czech interface; the application updates itself from the releases here
 
-Balíčky budou na stránce [Releases](../../releases). Zdrojový kód není veřejný.
+## Download
 
-## Nastavení hry
+Packages are published on the [Releases](../../releases) page: `RaceEngineer-win-x64.zip` (Windows) and `RaceEngineer-linux-x64.zip` (Linux / Steam Deck, run `chmod +x RaceEngineer` once after unpacking). Unpack the **whole folder** and start `RaceEngineer`. Each package has a `.sha256` file for verification. The source code is not public.
 
-Ve hře: Nastavení → Telemetrie → UDP telemetrie zapnout, IP `127.0.0.1`, port `20777`, frekvence 20 Hz.
+## Game setup
 
-## Zdroje dat
+In the game: Settings → Telemetry → UDP Telemetry on, IP `127.0.0.1`, port `20777`, 20 Hz.
 
-Údaje a obrázky okruhů pocházejí z Wikipedie a Wikimedia Commons (CC BY-SA a další). F1 a F1 25 jsou ochranné známky svých vlastníků; projekt není s nimi nijak spojen.
+## Language and updates
+
+*File → Settings* lets you choose English or Czech (applied after a restart) and switch the automatic check for new versions on or off. *Help → Check for updates* checks manually.
+
+## Data sources
+
+Circuit data and images come from Wikipedia and Wikimedia Commons (CC BY-SA and other licences); authors and licences are listed in `Assets/CREDITS.md` inside the package. F1 and F1 25 are trademarks of their owners; this project is not affiliated with them.
