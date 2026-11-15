@@ -10,8 +10,17 @@
 - home page with the circuits of the game: map, named turns, lap record and your own sessions
 - lap analysis: channel charts, track map, lap comparison, sectors, positions, car setup, tyres
 - race strategy planner (pit window, safety car, penalties)
+- live dashboard: rider cards, race order with gaps and tyres, track map with yellow/red flags and numbered turns, crash and incident alerts
+- also records Forza Horizon 5 / 6 (Data Out): world map and circuits recognised from the start line
 - MCP server that lets an AI read the telemetry and control the application
 - English (default) and Czech interface; the application updates itself from the releases here
+
+## Screenshots
+
+**Live dashboard** – every module can be moved by dragging its header.
+
+<p align="center"><img src="assets/screenshots/live-driver.png" alt="Live rider card" width="46%"> <img src="assets/screenshots/live-map.png" alt="Live track map" width="52%"></p>
+<p align="center"><img src="assets/screenshots/live-race-order.png" alt="Race order" width="49%"> <img src="assets/screenshots/live-yellow-flag.png" alt="Race order with a yellow flag" width="49%"></p>
 
 ## Download
 

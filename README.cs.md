@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-readme-1200x300.png" alt="RaceEngineer" width="900">
+  <img src="assets/banner-readme-1200x300-cs.png" alt="RaceEngineer" width="900">
 </p>
 
 [English](README.md) · **Čeština**
@@ -10,8 +10,17 @@
 - úvodní stránka s okruhy ze hry: mapa, pojmenované zatáčky, rekord kola a vaše sessiony
 - analýza kol: grafy kanálů, mapa trati, porovnání kol, sektory, pozice, nastavení vozu, pneumatiky
 - plánovač závodní strategie (okno boxové zastávky, safety car, penalizace)
+- živý přehled: karty jezdců, pořadí v závodě s rozestupy a pneumatikami, mapa trati se žlutými/červenými vlajkami a očíslovanými zatáčkami, upozornění na havárie a incidenty
+- zaznamenává i Forza Horizon 5 / 6 (Data Out): mapa světa a okruhy poznané podle startovní čáry
 - MCP server, přes který může AI číst telemetrii a ovládat aplikaci
 - rozhraní v angličtině (výchozí) a češtině; aplikace se sama aktualizuje z tady vydaných verzí
+
+## Snímky
+
+**Živý přehled** – každý modul se dá přesunout tažením za záhlaví.
+
+<p align="center"><img src="assets/screenshots/live-driver.png" alt="Karta jezdce" width="46%"> <img src="assets/screenshots/live-map.png" alt="Živá mapa trati" width="52%"></p>
+<p align="center"><img src="assets/screenshots/live-race-order.png" alt="Pořadí v závodě" width="49%"> <img src="assets/screenshots/live-yellow-flag.png" alt="Pořadí se žlutou vlajkou" width="49%"></p>
 
 ## Stažení
 
