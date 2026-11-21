@@ -1,49 +1,47 @@
 <p align="center">
-  <img src="assets/logo/png/banner-readme-1200x300.png" alt="RaceEngineer" width="900">
+  <img src="assets/banner-readme-1200x300.png" alt="RaceEngineer" width="900">
 </p>
 
 **English** · [Čeština](README.cs.md)
 
 **RaceEngineer** is a desktop application (Windows, macOS and Linux / Steam Deck) that records and analyses racing telemetry from several games.
 
+- records telemetry into SQLite
+- home page with the circuits of the game: map, named turns, lap record and your own sessions
+- lap analysis: channel charts, track map, lap comparison, sectors, positions, car setup, tyres
+- race strategy planner (pit window, safety car, penalties)
+- live dashboard: rider cards, race order with gaps and tyres, track map with yellow/red flags and numbered turns, crash and incident alerts
+- English (default) and Czech interface; the application updates itself from the releases here
+
 ## Supported games
 
 | Game | Source |
 |---|---|
 | **F1 25** (2026 Season Pack) | UDP telemetry |
-| **Forza Horizon 6** | Data Out (Xbox or PC) |
-| **Forza Horizon 5** | Data Out (Xbox or PC) |
+| **Forza Horizon 6** | Data Out (Xbox or PC); world map and circuits recognised from the start line |
+| **Forza Horizon 5** | Data Out (Xbox or PC); world map and circuits recognised from the start line |
 | **Assetto Corsa EVO** | shared memory (Windows, game on the same PC) |
 | **RaceRoom Racing Experience** | shared memory (Windows, game on the same PC) |
 
-## Features
+## Screenshots
 
-- records UDP telemetry into SQLite, imports `.bin` captures
-- home page with the circuits of the game: map, named turns, lap record and your own sessions
-- lap analysis: channel charts, track map, lap comparison, sectors, positions, car setup, tyres
-- race strategy planner (pit window, safety car, penalties)
-- English (default) and Czech interface, automatic updates from GitHub Releases
+**Live dashboard** – every module can be moved by dragging its header.
 
-## Running
+<p align="center"><img src="assets/screenshots/live-driver.png" alt="Live rider card" width="46%"> <img src="assets/screenshots/live-map.png" alt="Live track map" width="52%"></p>
+<p align="center"><img src="assets/screenshots/live-race-order.png" alt="Race order" width="49%"> <img src="assets/screenshots/live-yellow-flag.png" alt="Race order with a yellow flag" width="49%"></p>
 
-Download the package from the public [RaceEngineer releases](https://github.com/AlchKosac/RaceEngineer/releases), unpack the **whole folder** (including `Assets/`) and start `RaceEngineer`. Each game has its own setup steps inside the application (for F1 25: UDP telemetry to `127.0.0.1:20777`, format 2025, 20 Hz).
+## Download
 
-Development: `dotnet run --project src/RaceEngineer.Desktop`, tests: `dotnet test`. Details are in `docs/NAVRH.md` (design, Czech) and `docs/DISTRIBUCE.md` (distribution, Czech).
+Packages are published on the [Releases](../../releases) page: `RaceEngineer-win-x64.zip` (Windows) and `RaceEngineer-linux-x64.zip` (Linux / Steam Deck, run `chmod +x RaceEngineer` once after unpacking). Unpack the **whole folder** and start `RaceEngineer`. Each package has a `.sha256` file for verification. The source code is not public.
 
-## Repositories
+## Game setup (F1 25)
 
-- **RaceEngineer-SourceCode** (private): the source code, documentation and tests.
-- **[RaceEngineer](https://github.com/AlchKosac/RaceEngineer)** (public): README, logo and the downloadable packages (Releases). The application checks this repository for new versions.
+F1 25: in the game Settings → Telemetry → UDP Telemetry on, IP `127.0.0.1`, port `20777`, 20 Hz.
 
-## Releases
+## Language and updates
 
-1. Raise `<Version>` in `src/RaceEngineer.Desktop/RaceEngineer.Desktop.csproj`.
-2. `tools/release.ps1 -Publish` builds `RaceEngineer-win-x64.zip` and `RaceEngineer-linux-x64.zip` with SHA-256 files and creates the GitHub Release `v<Version>` in the public repository.
+*File → Settings* lets you choose English or Czech (applied after a restart) and switch the automatic check for new versions on or off. *Help → Check for updates* checks manually.
 
-## Logo
+## Data sources
 
-Sources and all sizes are in `assets/logo/` (SVG, PNG 16–1024 px, `app.ico`, banners). `dotnet run --project tools/LogoGen -- <repository root>` regenerates them.
-
-## Licences and data sources
-
-Circuit data and images come from Wikipedia and Wikimedia Commons (CC BY-SA and other licences); authors and licences are listed in `src/RaceEngineer.Circuits/Assets/CREDITS.md`. The EA UDP specification is not redistributed. F1 and F1 25 are trademarks of their owners; this project is not affiliated with them.
+Circuit data and images come from Wikipedia and Wikimedia Commons (CC BY-SA and other licences); authors and licences are listed in `Assets/CREDITS.md` inside the package. F1 and F1 25 are trademarks of their owners; this project is not affiliated with them.
